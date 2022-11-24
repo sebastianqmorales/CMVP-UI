@@ -1,5 +1,11 @@
 <script>
+    // The comment input when completed should output a full comment at the bottom of the input,
+    // Then it should clear the input and render the comment 
+    // The form data will be taken and passed into the props of the Comment component
     // This is where the input for the comment will go
+    
+
+    // Comment input will send data to mongoDB directly or to server api that will then post data to mongodb
 
 </script>
 
