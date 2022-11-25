@@ -18,10 +18,10 @@ export let upVote;
         <div class="date font-semibold">{date}</div>
         {#if commentType === 'Agreeing'}
         <div class="comment-type border-solid border-2 rounded-lg border-blue-600 p-1 text-xs font-bold">{commentType}</div>
-        {:else if commentType === 'Neutral'}
-        <div class="comment-type border-solid border-2 rounded-lg border-gray-600 p-1 text-xs font-bold">{commentType}</div>
-        {:else}
+        {:else if commentType === 'Disagreeing'}
         <div class="comment-type border-solid border-2 rounded-lg border-red-600 p-1 text-xs font-bold">{commentType}</div>
+        {:else}
+        <div class="comment-type border-solid border-2 rounded-lg border-gray-600 p-1 text-xs font-bold">{commentType}</div>
         {/if}
     </div>
     <p class="mb-2">{commentContent}</p>

@@ -9,8 +9,17 @@
     let test5 = 240;
 </script>
 
-<CommentInput/>
-<Comments 
+<div class="container">
+    <CommentInput/>
+</div>
+
+<!-- <Comments 
     userName={test} date={test1} commentType={test2} 
     commentContent={test3} upVote={test4} downVote={test5}
-/>
+/> -->
+
+<style>
+    .container{
+        padding: 3rem;
+    }
+</style>
