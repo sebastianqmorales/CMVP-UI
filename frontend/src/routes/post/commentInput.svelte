@@ -18,6 +18,11 @@
 			data[key] = value;
 		}
 		console.log(data);
+		fetch('http://localhost:3000/comments', {
+			method: 'POST',
+			body: data,
+			mode: 'no-cors'
+		});
 	}
 </script>
 
@@ -28,13 +33,13 @@
 		class="border-solid border-2 border-gray-400 "
 	>
 		<!-- <input class="border-solid border-2" placeholder="Share your perspective." type="text"/> -->
-		<textarea class="container" name="comment" placeholder="Share your perspective." />
+		<textarea class="container" name="commentContent" placeholder="Share your perspective." />
 		<div
 			class="container flex justify-between items-center px-2 py-1 border-solid border border-gray-200"
 		>
-			<label><input type="radio" name="radio" value="agreeing" /> agreeing</label>
-			<label><input type="radio" name="radio" value="neutral" /> neutral</label>
-			<label><input type="radio" name="radio" value="disagreeing" /> disagreeing</label>
+			<label><input type="radio" name="commentType" value="agreeing" /> agreeing</label>
+			<label><input type="radio" name="commentType" value="neutral" /> neutral</label>
+			<label><input type="radio" name="commentType" value="disagreeing" /> disagreeing</label>
 			<button class="border-solid border-2 rounded-lg border-orange-500 px-2" type="submit"
 				>comment</button
 			>
