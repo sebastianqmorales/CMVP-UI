@@ -9,7 +9,7 @@
 	// Get the data from the form
 	// Post it to the server
 
-	function onSubmit(e) {
+	async function onSubmit(e) {
 		const formData = new FormData(e.target);
 
 		const data = {};
@@ -18,9 +18,9 @@
 			data[key] = value;
 		}
 		console.log(data);
-		fetch('http://localhost:3000/comments', {
+		await fetch('http://localhost:3000/comments', {
 			method: 'POST',
-			body: data,
+			body: JSON.stringify(data),
 			mode: 'no-cors'
 		});
 	}
@@ -56,8 +56,5 @@
 		height: 100px;
 		padding: 0.5rem;
 		outline: none;
-	}
-
-	label > input {
 	}
 </style>
