@@ -11,9 +11,15 @@
 	let downVote = 240;
 </script>
 
-<div class="commentSection p-6 flex flex-col justify-center">
-	<CommentInput />
-	<Comments {userName} {date} {commentType} {commentContent} {upVote} {downVote} />
+<!-- Messing around with flex, trying to center the comment input and output -->
+
+<div class="container flex flex-col justify-center">
+	<div class="commentSection p-6">
+		<CommentInput />
+	</div>
+	<div class="comments">
+		<Comments {userName} {date} {commentType} {commentContent} {upVote} {downVote} />
+	</div>
 </div>
 
 <style>
