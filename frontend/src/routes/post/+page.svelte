@@ -1,7 +1,10 @@
 <script>
 	import Comments from './comment.svelte';
 	import CommentInput from './commentInput.svelte';
+	import Post from './postContent.svelte';
 	import CommentContainer from './commentsContainer.svelte';
+
+	// import '../../app.postcss';
 
 	let userName = 'Sebastian';
 	let date = '5 days ago';
@@ -12,14 +15,13 @@
 </script>
 
 <!-- Messing around with flex, trying to center the comment input and output -->
-
-<div class="container flex flex-col justify-center">
-	<div class="commentSection p-6">
-		<CommentInput />
-	</div>
-	<div class="comments">
-		<Comments {userName} {date} {commentType} {commentContent} {upVote} {downVote} />
-	</div>
+<h1>Test</h1>
+<Post />
+<div class="commentSection py-6">
+	<CommentInput />
+</div>
+<div class="commentSection py-6">
+	<Comments {userName} {date} {commentType} {commentContent} {upVote} {downVote} />
 </div>
 
 <style>

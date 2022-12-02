@@ -8,30 +8,10 @@
 
 	// Get the data from the form
 	// Post it to the server
-
-	async function onSubmit(e) {
-		const formData = new FormData(e.target);
-
-		const data = {};
-		for (let field of formData) {
-			const [key, value] = field;
-			data[key] = value;
-		}
-		console.log(data);
-		await fetch('http://localhost:3000/comments', {
-			method: 'POST',
-			body: JSON.stringify(data),
-			mode: 'no-cors'
-		});
-	}
 </script>
 
 <div class="container">
-	<form
-		on:submit|preventDefault={onSubmit}
-		method="post"
-		class="border-solid border-2 border-gray-400 "
-	>
+	<form method="post" class="border-solid border-2 border-gray-400 ">
 		<!-- <input class="border-solid border-2" placeholder="Share your perspective." type="text"/> -->
 		<textarea class="container" name="commentContent" placeholder="Share your perspective." />
 		<div

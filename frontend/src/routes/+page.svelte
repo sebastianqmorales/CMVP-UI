@@ -1,1 +1,5 @@
-<h1>Home Page</h1>
+<script></script>
+
+<h2>Home Page</h2>
+
+<strong>Test</strong>
