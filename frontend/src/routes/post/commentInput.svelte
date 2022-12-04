@@ -11,7 +11,7 @@
 </script>
 
 <div class="container">
-	<form method="post" class="border-solid border-2 border-gray-400 ">
+	<form method="POST" class="border-solid border-2 border-gray-400 ">
 		<!-- <input class="border-solid border-2" placeholder="Share your perspective." type="text"/> -->
 		<textarea class="container" name="commentContent" placeholder="Share your perspective." />
 		<div

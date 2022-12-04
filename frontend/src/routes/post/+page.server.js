@@ -1,16 +1,25 @@
 /** @type {import('./$types').Actions} */
 export const actions = {
-	default: async (e) => {
+	default: async ({ request }) => {
 		// Get form data and post it to the server
+		const formData = await request.formData();
+		const userName = formData.get('userName');
+		const commentType = formData.get('commentType');
+		const commentContent = formData.get('commentContent');
+		const upVotes = formData.get('upVotes');
+		const downVotes = formData.get('downVotes');
+		console.log(commentContent);
 		fetch('http://localhost:3000/comments', {
 			// Adding method type
 			method: 'POST',
 
 			// Adding body or contents to send
 			body: JSON.stringify({
-				userName: 'foo',
-				commentType: 'disagreeing',
-				commentContent: 'a test hopefully works'
+				userName: 'Sebastian',
+				commentType,
+				commentContent,
+				upVotes,
+				downVotes
 			}),
 
 			// Adding headers to the request
@@ -18,10 +27,8 @@ export const actions = {
 				'Content-type': 'application/json; charset=UTF-8'
 			}
 		})
-			// Converting to JSON
-			.then((response) => response.json())
-
 			// Displaying results to console
+			.then((response) => response.json())
 			.then((json) => console.log(json));
 	}
 };
