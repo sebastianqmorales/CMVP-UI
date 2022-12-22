@@ -12,7 +12,7 @@ export const actions = {
 		fetch('http://localhost:3000/comments', {
 			method: 'POST',
 			body: JSON.stringify({
-				userName: 'Sebastian',
+				userName: 'Miles',
 				commentType,
 				commentContent,
 				upVotes,
