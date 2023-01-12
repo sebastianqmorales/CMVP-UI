@@ -5,7 +5,11 @@
 <form class="md:px-20 xl:px-40">
 	<Textarea rows="3" class="mb-4" placeholder="Share your perspective.">
 		<div slot="footer" class="flex items-center justify-between">
-			<Button class="bg-orange-500 hover:bg-orange-600" type="submit">Share</Button>
+			<input
+				class="bg-orange-500 hover:bg-orange-600 py-1 px-3 rounded-sm text-white cursor-pointer"
+				type="submit"
+				placeholder="Share"
+			/>
 			<div class="flex gap-3">
 				<Radio name="custom" custom>
 					<div
